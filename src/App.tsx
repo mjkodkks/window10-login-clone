@@ -12,7 +12,7 @@ function App() {
     const initDate = new Date()
     const minutes = initDate.getMinutes()
     const hour = initDate.getHours()
-    const day = initDate.getDay()
+    const day = initDate.getDate()
     const month = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(initDate)
     const dayFull = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(initDate)
 
