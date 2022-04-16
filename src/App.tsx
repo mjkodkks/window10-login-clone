@@ -61,11 +61,16 @@ function App() {
 
 
   const bg = {
-    backgroundImage: 'url(' + wallpaper + ')',
-  };
+    backgroundImage: `url(${wallpaper})`
+  }
+
+  const isBlur = () => {
+    return  getForm ? 'blurry-bg transition-all duration-500' : ''
+  }
 
   return (<>
-    <div className="h-full w-full bg-center bg-no-repeat bg-fixed bg-cover" style={bg}>
+    <div className="h-full w-full relative">
+      <div className={`h-full w-full z-0 absolute bg-center bg-no-repeat bg-fixed bg-cover ${isBlur()}`}  style={bg}></div>
       <div className="h-full w-full relative flex justify-center items-center">
         {
           getForm ?
@@ -90,10 +95,10 @@ function App() {
           </div>
         }
       </div>
+      {
+        !getForm && <div className='fixed top-0 left-0 right-0 bottom-0 bg-transparent z-10 cursor-pointer' onClick={() => setGetForm(true)}></div>
+      }
     </div>
-    {
-      !getForm && <div className='fixed top-0 left-0 right-0 bottom-0 bg-transparent z-10' onClick={() => setGetForm(true)}></div>
-    }
   </>
   )
 }
