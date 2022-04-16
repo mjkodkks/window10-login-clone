@@ -69,7 +69,7 @@ function App() {
       <div className="h-full w-full relative flex justify-center items-center">
         {
           getForm ?
-            <div className='form flex justify-center flex-col items-center gap-8 w-[300px] h-auto'>
+            <div className='form flex justify-center flex-col items-center gap-8 w-[300px] h-auto fadeIn'>
               <div className='w-[200px] h-[200px] bg-white rounded-full bg-center bg-no-repeat bg-cover' style={{ backgroundImage: 'url(https://avatars.githubusercontent.com/u/21122708?v=4)' }}></div>
               <div className='text-4xl text-white font-light'>Thanonphat Supho</div>
               <div className="block relative w-full">
