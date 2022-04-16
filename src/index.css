@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, html {
+  height: 100%;
+  width: 100%;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+#root {
+  height: 100%;
+  width: 100%;
+}
