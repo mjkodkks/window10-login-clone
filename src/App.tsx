@@ -16,7 +16,7 @@ function App() {
     const month = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(initDate)
     const dayFull = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(initDate)
 
-    setTime(`${hour}:${minutes}`)
+    setTime(`${hour < 10 ? '0' + hour: hour}:${minutes < 10 ? '0' + minutes: minutes}`)
     setDate(`${dayFull}, ${month} ${day}`)
   }
 
